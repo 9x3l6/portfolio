@@ -1,6 +1,10 @@
 #!/usr/bin/env groovy
 
 node {
+    agent {
+        label 'built-in'
+    }
+
     stage('checkout') {
         checkout scm
     }
